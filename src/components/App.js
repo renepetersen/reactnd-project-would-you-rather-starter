@@ -3,6 +3,7 @@ import '../styles/App.css'
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
 import Dasboard from './Dashboard'
+import AuthedUserInfo from './AuthedUserInfo'
 
 class App extends Component {
   componentDidMount() {
@@ -14,7 +15,11 @@ class App extends Component {
       <div>
         {this.props.loading === true 
         ? null
-        : <Dasboard />
+        : <div>
+            <nav>Navigation</nav>
+            <AuthedUserInfo />
+            <Dasboard />
+          </div>
         }
       </div>
     )
