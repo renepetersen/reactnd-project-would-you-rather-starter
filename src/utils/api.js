@@ -18,3 +18,7 @@ export function getInitialData () {
 export function saveQuestionAnswer (answerParams) {
 	return _saveQuestionAnswer(answerParams)
 }
+
+export function saveQuestion (questionParams) {
+	return _saveQuestion(questionParams)
+}

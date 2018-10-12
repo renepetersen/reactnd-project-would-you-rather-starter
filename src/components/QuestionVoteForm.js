@@ -29,7 +29,7 @@ class QuestionVoteForm extends Component {
 	}
 	
 	render() {
-		const { id, optionOne, optionTwo } = this.props
+		const { optionOne, optionTwo } = this.props
 
 		return (
 			<div className='question-vote'>

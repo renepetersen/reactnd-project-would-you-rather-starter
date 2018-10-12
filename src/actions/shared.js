@@ -17,7 +17,7 @@ export function handleInitialData () {
 	}
 }
 
-export  function saveAnswer ({ authedUser, qid, answer }) {
+export function saveAnswer ({authedUser, qid, answer}) {
 	return {
 		type: ADD_ANSWER,
 		authedUser,

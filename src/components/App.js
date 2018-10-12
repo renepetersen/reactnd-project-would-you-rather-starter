@@ -10,6 +10,7 @@ import Nav from './Nav'
 import Dasboard from './Dashboard'
 import AuthedUserInfo from './AuthedUserInfo'
 import QuestionPage from './QuestionPage'
+import QuestionAddNewPage from './QuestionAddNewPage'
 
 class App extends Component {
 	componentDidMount() {
@@ -33,6 +34,7 @@ class App extends Component {
 							<div className='container'>	
 								<Route path='/question/:id' exact component={QuestionPage} />
 								<Route path='/' exact component={Dasboard} />
+								<Route path='/new' exact component={QuestionAddNewPage} />
 							</div>
 						</Fragment>
 					}
