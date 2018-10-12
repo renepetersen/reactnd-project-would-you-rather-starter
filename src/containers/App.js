@@ -4,13 +4,14 @@ import '../styles/App.css'
 import { connect } from 'react-redux'
 import LoadingBar from 'react-redux-loading'
 import { handleInitialData } from '../actions/shared'
-import Login from './Login'
-import LogoutButton from './LogoutButton'
-import Nav from './Nav'
+import Login from '../components/Login'
+import LogoutButton from '../components/LogoutButton'
+import Nav from '../components/Nav'
+import AuthedUserInfo from '../components/AuthedUserInfo'
 import Dasboard from './Dashboard'
-import AuthedUserInfo from './AuthedUserInfo'
 import QuestionPage from './QuestionPage'
 import QuestionAddNewPage from './QuestionAddNewPage'
+import Leaderboard from './Leaderboard'
 
 class App extends Component {
 	componentDidMount() {
@@ -35,6 +36,7 @@ class App extends Component {
 								<Route path='/question/:id' exact component={QuestionPage} />
 								<Route path='/' exact component={Dasboard} />
 								<Route path='/new' exact component={QuestionAddNewPage} />
+								<Route path='/leaderboard' exact component={Leaderboard} />
 							</div>
 						</Fragment>
 					}

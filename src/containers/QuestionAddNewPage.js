@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import QuestionAddNewForm from './QuestionAddNewForm'
+import QuestionAddNewForm from '../components/QuestionAddNewForm'
 
 class QuestionAddNewPage extends Component {
     render () {

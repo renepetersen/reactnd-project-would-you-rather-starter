@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import QuestionResults from './QuestionResults'
-import QuestionVote from './QuestionVote'
+import QuestionResults from '../components/QuestionResults'
+import QuestionVote from '../components/QuestionVote'
 import { formatQuestion } from '../utils/helpers'
 
 class QuestionPage extends Component {

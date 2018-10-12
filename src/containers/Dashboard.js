@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import QuestionTeaser from './QuestionTeaser'
+import QuestionTeaser from '../components/QuestionTeaser'
 
 class Dashboard extends Component {
 	render() {
