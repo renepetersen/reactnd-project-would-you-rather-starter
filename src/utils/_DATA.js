@@ -1,8 +1,25 @@
 let users = {
+  alexvangilse: {
+    id: 'alexvangilse',
+    name: 'Alex van Gilse',
+    avatarURL: '/images/avatars/avatar-6.svg',
+    answers: {},
+    questions: []
+  },
+  renepetersen: {
+    id: 'renepetersen',
+    name: 'René  Petersen',
+    avatarURL: '/images/avatars/avatar-1.svg',
+    answers: {
+      "8xf0y6ziyjabvozdd253nd": 'optionOne',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne'
+    },
+    questions: []
+  },  
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: 'todo',
+    avatarURL: '/images/avatars/avatar-3.svg',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -14,7 +31,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: 'todo',
+    avatarURL: '/images/avatars/avatar-5.svg',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +41,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: 'todo',
+    avatarURL: '/images/avatars/avatar-2.svg',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -40,7 +57,7 @@ let questions = {
     author: 'sarahedo',
     timestamp: 1467166872634,
     optionOne: {
-      votes: ['sarahedo'],
+      votes: ['sarahedo','renepetersen'],
       text: 'have horrible short term memory',
     },
     optionTwo: {
@@ -53,7 +70,7 @@ let questions = {
     author: 'johndoe',
     timestamp: 1468479767190,
     optionOne: {
-      votes: [],
+      votes: ['renepetersen'],
       text: 'become a superhero',
     },
     optionTwo: {

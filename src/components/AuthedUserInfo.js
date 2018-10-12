@@ -1,35 +1,32 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Avatar from './Avatar'
 
 class AuthedUserInfo extends Component {
-    render() {
-        const { userInfo } = this.props
+	render() {
+		const { userInfo } = this.props
 
-        if (userInfo === null) {
-            return <p>This User doesn't existd</p>
-        }
+		if (userInfo === null) {
+			return <p>This User doesn't exists</p>
+		}
 
-        const { name, avatarURL } = userInfo
+		const { name } = userInfo
 
-        return (
-            <div className="authed-user-info">
-                <img
-                    src={avatarURL}
-                    alt={`Avatar of ${name}`}
-                    className='avatar'
-                />
-                { name }
-            </div>
-        )
-    }
+		return (
+			<div className="authed-user-info">
+				<Avatar user={userInfo} />
+				{ name }
+			</div>
+		)
+	}
 }
 
 function mapStateToProps ({authedUser, users}) {
-    const userInfo = users[authedUser]
+	const userInfo = users[authedUser]
 
-    return {
-        userInfo: userInfo
-    }
+	return {
+		userInfo: userInfo
+	}
 }
 
 export default connect(mapStateToProps)(AuthedUserInfo)
