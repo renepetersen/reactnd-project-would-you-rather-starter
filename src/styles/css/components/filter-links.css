@@ -1,0 +1,13 @@
+.filter-links {
+  margin: 0 0 20px 0;
+  text-align: center; }
+  .filter-links button {
+    font-weight: 400;
+    margin: 0 15px 10px 0;
+    cursor: pointer;
+    color: #000;
+    min-width: 150px; }
+    .filter-links button:disabled {
+      cursor: default;
+      color: #00aa9e;
+      font-weight: 700; }

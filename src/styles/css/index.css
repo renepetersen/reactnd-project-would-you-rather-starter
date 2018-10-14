@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ol,
+ul {
+  st-style: none; }
+
+a {
+  color: #DE7008;
+  text-decoration: none; }
+
+a:hover,
+a:focus {
+  color: #DE7008;
+  text-decoration: none; }
+
+a:focus {
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 42px; }
+
+h2 {
+  font-size: 26px; }
+
+h3 {
+  font-size: 21px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 20px; }
+
+p {
+  margin: 0 0 13px; }
+
+input, textarea, select, button {
+  font-size: 14px;
+  font-family: monospace; }
+
+button {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  background-color: #ececec; }
+
+select {
+  padding: 5px; }

@@ -1,0 +1,15 @@
+.go-back {
+	font-size: 14px;
+	padding: 7px 10px;
+	margin: 20px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	color: #000;
+	background-color: #ececec;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: #000;
+		background-color: rgb(255, 255, 255);
+	}
+}

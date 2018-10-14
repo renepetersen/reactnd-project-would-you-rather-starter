@@ -1,0 +1,18 @@
+.question-author {
+  flex: 1 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  background: #cccccc4a;
+  padding: 20px; }
+  .question-author .avatar {
+    width: 70px;
+    margin: 0 20px 0 0; }
+  .question-author .question-author-name {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 10px 0; }
+  .question-author .question-date {
+    display: block;
+    font-size: 12px; }

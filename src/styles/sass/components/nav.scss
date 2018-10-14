@@ -1,0 +1,19 @@
+.nav {
+	ul {
+		display: inline-block;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 30px;
+
+		a {
+			&:hover {
+				color: #000000;
+			}
+			&.active {
+				font-weight: 700;
+			}	
+		}
+	}
+}

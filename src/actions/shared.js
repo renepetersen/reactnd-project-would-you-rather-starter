@@ -1,0 +1,27 @@
+import { getInitialData } from '../utils/api'
+import { receiveUsers } from '../actions/users'
+import { receiveQuestions } from '../actions/questions'
+import { showLoading, hideLoading } from 'react-redux-loading'
+
+export const ADD_ANSWER = 'ADD_ANSWER'
+
+export function handleInitialData () {
+	return (dispatch) => {
+		dispatch(showLoading())
+		return getInitialData()
+			.then(({users, questions}) => {
+				dispatch(receiveUsers(users))
+				dispatch(receiveQuestions(questions))
+				dispatch(hideLoading())
+			})
+	}
+}
+
+export function saveAnswer ({authedUser, qid, answer}) {
+	return {
+		type: ADD_ANSWER,
+		authedUser,
+		qid,
+		answer
+	}
+}

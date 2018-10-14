@@ -1,0 +1,86 @@
+
+.question-vote {
+	flex: 1 100%;
+	display: flex;
+	flex-flow: row wrap;	
+	padding: 50px 20px 0;
+
+	> label {
+		flex: 1;
+		cursor: pointer;
+
+		&:first-child {
+			margin: 0 20px 0 0;
+		}
+
+		&:hover {
+			span {
+				box-shadow: 1px 0px 5px 2px #cfcfcf;
+				border: 1px solid transparent;
+			}
+		}
+
+		input {
+			display: none;
+		}
+
+		span {
+			position: relative;
+			border: 1px solid #cfcfcf;
+			min-height: 60px;
+			align-items: center;
+			display: flex;
+			padding: 20px;
+			border-radius: 3px;
+			height: 100%;
+			
+			&:before {
+				content: '';
+				opacity: 0;
+
+				position: absolute;
+				top: -35px;
+				right: 0px;
+				padding: 10px;
+				font-size: 16px;
+				color: #008d84;
+				font-weight: 700;
+				transition: all 0.3s ease;
+				
+			}
+		}
+
+		input:checked {
+			+ span {
+				transition: all 0.3s ease;
+				position: relative;
+				border: 1px solid #008d84;
+				background-color: rgba(0, 170, 158, 0.1607843137254902);
+				box-shadow: none;
+
+				&:before {
+					content: 'Your choice';
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	> div {
+		flex: 1 1 100%;
+	}
+
+	.button-invisible {
+		visibility: hidden;
+	}
+
+	.button-visible {
+		visibility: visible;
+	}
+
+	button {
+		margin: 20px 0;
+		float: right;
+		font-weight: 700;
+	}
+}

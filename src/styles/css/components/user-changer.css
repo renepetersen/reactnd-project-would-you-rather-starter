@@ -1,0 +1,9 @@
+.user-changer {
+  background-color: #ffba39; }
+  .user-changer select {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000; }
+    .user-changer select option {
+      background: #ffba39; }

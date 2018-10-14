@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  height: 100vh; }
+  @media (min-width: 541px) {
+    .container {
+      max-width: 500px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 600px; } }
+
+header + .container {
+  height: calc(100vh - 142px); }
+
+.loading-bar div {
+  background-color: orange !important; }
