@@ -21,10 +21,10 @@ class Login extends Component {
 				{Object.keys(users).length > 0 && (
 					<div className="user-changer">
 						<select 
-							defaultValue={'move'} 
+							defaultValue={'choose'} 
 							onChange={(event) => this.handleLogin(event.target.value)}
 						>
-							<option value="move" disabled>Choose user</option>
+							<option value="choose" disabled>Choose user</option>
 							
 							{Object.keys(users).map((user) => 
 								<option key={users[user].id} value={users[user].id}>{users[user].name}</option>
