@@ -29,10 +29,9 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps ({authedUser, users, questions}) {
-	const authedUserInfo = users[authedUser]
-	const answerdQids = authedUserInfo.answers
+	const answerdQids = users[authedUser].answers
 	const answerdQidsArr = Object.keys(answerdQids)
-	// console.log(questions);
+	console.log(answerdQidsArr);
 
 	const answerdQuestions = Object.keys(questions)
 		.filter(key => answerdQidsArr.includes(key))
@@ -40,7 +39,6 @@ function mapStateToProps ({authedUser, users, questions}) {
 			obj[key] = questions[key];
 			return obj;
 		}, {});
-	// console.log(answerdQidsArr);
 
 	const unanswerdQuestions = Object.keys(questions)
 		.filter(key => !answerdQidsArr.includes(key))
@@ -48,7 +46,6 @@ function mapStateToProps ({authedUser, users, questions}) {
 			obj[key] = questions[key];
 			return obj;
 		}, {});
-	// console.log(unanswerdQuestions);
 
 	return {
 		answerdQuestionsIds: Object.keys(answerdQuestions)
