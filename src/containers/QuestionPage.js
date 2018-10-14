@@ -5,7 +5,7 @@ import QuestionVote from '../components/QuestionVote'
 import { formatQuestion } from '../utils/helpers'
 
 class QuestionPage extends Component {
-	render () {
+	render() {
 		const { id, question } = this.props 
 		const { hasVoted } = question
 

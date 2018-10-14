@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Avatar from './Avatar'
 
-
 class QuestionTeaser extends Component {
 	render() {
 		const { question, questionAuthor } = this.props

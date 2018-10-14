@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import QuestionAddNewForm from '../components/QuestionAddNewForm'
 
 class QuestionAddNewPage extends Component {
-    render () {
+    render() {
         return (
             <div>
                 <QuestionAddNewForm />
