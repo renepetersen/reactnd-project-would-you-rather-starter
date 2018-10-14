@@ -15,7 +15,7 @@ import Dasboard from './Dashboard'
 import QuestionPage from './QuestionPage'
 import QuestionAddNewPage from './QuestionAddNewPage'
 import Leaderboard from './Leaderboard'
-import NoMatch from './NoMatch'
+import NoMatch from '../components/NoMatch'
 
 
 class App extends Component {
