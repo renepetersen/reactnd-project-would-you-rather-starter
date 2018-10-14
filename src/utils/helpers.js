@@ -20,8 +20,8 @@ export function formatQuestion (question, author, authedUserAnswers) {
 	return {
 		id,
 		timestamp,
-		optionOne,
 		optionTwo,
+		optionOne,
 		name,
 		user: !avatarURL ? null : {
 			name : name,
@@ -35,4 +35,19 @@ export function formatQuestion (question, author, authedUserAnswers) {
 
 export function calcPerc(numberVotes, totalVotes) {
 	return (numberVotes / totalVotes).toFixed(2) * 100;
+}
+
+export function formatLeaderboardUser (id, name, avatarURL, totalanswers, totalquestions) {
+
+	return {
+		id,
+		name,
+		userAvatar: !avatarURL ? null : {
+			name : name,
+			avatarURL: avatarURL
+		},
+		totalAnswers: totalanswers,
+		totalQuestions: totalquestions,
+		totalScore: totalanswers + totalquestions
+	}
 }
