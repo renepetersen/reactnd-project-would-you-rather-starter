@@ -13,6 +13,13 @@
 			margin: 0 20px 0 0;
 		}
 
+		&:hover {
+			span {
+				box-shadow: 1px 0px 5px 2px #cfcfcf;
+				border: 1px solid transparent;
+			}
+		}
+
 		input {
 			display: none;
 		}
@@ -25,6 +32,7 @@
 			display: flex;
 			padding: 20px;
 			border-radius: 3px;
+			height: 100%;
 			
 			&:before {
 				content: '';
@@ -48,15 +56,14 @@
 				position: relative;
 				border: 1px solid #008d84;
 				background-color: rgba(0, 170, 158, 0.1607843137254902);
-				// 
+				box-shadow: none;
+
 				&:before {
 					content: 'Your choice';
 					opacity: 1;
 				}
 			}
 		}
-
-
 	}
 
 	> div {

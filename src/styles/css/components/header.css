@@ -1,5 +1,6 @@
 header {
-  border-bottom: 2px solid orange;
+  border-bottom: 1px solid #f9f9f9;
+  box-shadow: 1px 0px 20px -4px #ccc;
   padding: 20px;
   margin-bottom: 60px;
   display: flex;

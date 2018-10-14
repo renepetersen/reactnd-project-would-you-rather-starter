@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { handleSaveQuestion } from '../actions/questions'
 import { withRouter } from 'react-router-dom'
+import { setVisibilityFilter } from '../actions/visibilityFilter'
 
 class QuestionAddNewForm extends Component {
 	constructor(props) {
@@ -31,6 +32,8 @@ class QuestionAddNewForm extends Component {
 			authedUser
 		))
 
+		dispatch(setVisibilityFilter('SHOW_UNANSWERD'))
+
 		this.props.history.push(`/`)
 	}
 
@@ -38,8 +41,8 @@ class QuestionAddNewForm extends Component {
 		return (
 			<div className='question-add-form'>
 				<h2 className="heading">Create new question</h2>
-			   
-			    <p>Would You Rather...</p>
+				
+				<p>Would You Rather...</p>
 
 				<form onSubmit={this.handleSubmit} >
 					<label>

@@ -3,7 +3,7 @@
 
 .nav li {
   display: inline-block;
-  margin-right: 15px; }
+  margin-right: 30px; }
   .nav li a:hover {
     color: #000000; }
   .nav li a.active {

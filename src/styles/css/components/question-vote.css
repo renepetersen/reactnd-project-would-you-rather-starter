@@ -8,6 +8,9 @@
     cursor: pointer; }
     .question-vote > label:first-child {
       margin: 0 20px 0 0; }
+    .question-vote > label:hover span {
+      box-shadow: 1px 0px 5px 2px #cfcfcf;
+      border: 1px solid transparent; }
     .question-vote > label input {
       display: none; }
     .question-vote > label span {
@@ -17,7 +20,8 @@
       align-items: center;
       display: flex;
       padding: 20px;
-      border-radius: 3px; }
+      border-radius: 3px;
+      height: 100%; }
       .question-vote > label span:before {
         content: '';
         opacity: 0;
@@ -33,7 +37,8 @@
       transition: all 0.3s ease;
       position: relative;
       border: 1px solid #008d84;
-      background-color: rgba(0, 170, 158, 0.160784); }
+      background-color: rgba(0, 170, 158, 0.160784);
+      box-shadow: none; }
       .question-vote > label input:checked + span:before {
         content: 'Your choice';
         opacity: 1; }

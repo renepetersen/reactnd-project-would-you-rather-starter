@@ -51,3 +51,10 @@
     font-size: 20px;
     color: white;
     background-color: #00aa9e; }
+  .leaderboard-card.own {
+    border-color: #00aa9e;
+    border-width: 2px; }
+    .leaderboard-card.own .total-score {
+      border-color: #00aa9e; }
+      .leaderboard-card.own .total-score > span:first-child {
+        border-color: #00aa9e; }

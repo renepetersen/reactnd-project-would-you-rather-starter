@@ -67,4 +67,17 @@
 		color: white;
 		background-color: #00aa9e;
 	}
+
+
+	&.own {
+		border-color: #00aa9e;
+		border-width: 2px;
+		.total-score {
+			border-color: #00aa9e;
+			
+			> span:first-child {
+				border-color: #00aa9e;
+			}
+		}
+	}	
 }

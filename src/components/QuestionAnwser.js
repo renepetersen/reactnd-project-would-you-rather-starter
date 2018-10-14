@@ -7,10 +7,18 @@ class QuestionAnwser extends Component {
 			totalVotes,
 			perc } = this.props
 
+		const styles = { 
+			width: perc +'%'
+		}
+
 		return (
 			<div className='question-answer'>
 				{option.text} <br />
-				{option.votes.length} out of {totalVotes} is {perc}%
+				
+				<div className='progressbar'>
+					<span style={styles}>{perc}%</span>
+				</div>
+				{option.votes.length} out of {totalVotes} votes
 			</div>
 		)
 	}

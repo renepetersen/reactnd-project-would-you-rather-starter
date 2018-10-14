@@ -5,8 +5,8 @@ import LeaderBoardCard from '../components/LeaderBoardCard'
 
 class Leaderboard extends Component {
 	render() {
-		const { usersSorted } = this.props
-	
+		const { usersSorted, authedUser } = this.props
+
 		return (
 			<Fragment>
 				<h3 className='center'>Leaderboard</h3>
@@ -20,6 +20,7 @@ class Leaderboard extends Component {
 								avatarURL={usersSorted[useritem].avatarURL}
 								totalanswers={usersSorted[useritem].totalAnswers}
 								totalquestions={usersSorted[useritem].totalQuestions}
+								authedUser={authedUser}
 							/>
 						</li>
 					)}
@@ -33,7 +34,7 @@ class Leaderboard extends Component {
 	}
 }
 
-function mapStateToProps ({users}) {
+function mapStateToProps ({authedUser, users}) {
 
 	//Add new object properties 'totalAnswers and totalQuestions' to userObject.
 	Object.keys(users).forEach((item) => {
@@ -49,7 +50,7 @@ function mapStateToProps ({users}) {
 
 	return {
 		usersSorted: usersArray,
-		users
+		authedUser
 	}
 }
 
