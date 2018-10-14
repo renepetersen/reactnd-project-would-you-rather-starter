@@ -32,32 +32,29 @@ class QuestionVoteForm extends Component {
 		const { optionOne, optionTwo } = this.props
 
 		return (
-			<div className='question-vote'>
-
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						<input 
-							type="radio" 
-							value='optionOne'
-							checked={this.state.answer === "optionOne"}
-							onChange={this.handleChange}
-						/> {optionOne.text}
-					</label>
-						
-<br />
-					<label>
-						<input 
-							type="radio" 
-							value='optionTwo'
-							checked={this.state.answer === "optionTwo"}
-							onChange={this.handleChange}
-						/> {optionTwo.text}
-					</label>
-<br />
+			<form className='question-vote' onSubmit={this.handleSubmit}>
+				<label>
+					<input 
+						type="radio" 
+						value='optionOne'
+						checked={this.state.answer === "optionOne"}
+						onChange={this.handleChange}
+					/><span>{optionOne.text}</span>
+				</label>
 					
-					<button type="submit">Submit</button>
-				</form>
-			</div>
+				<label>
+					<input 
+						type="radio" 
+						value='optionTwo'
+						checked={this.state.answer === "optionTwo"}
+						onChange={this.handleChange}
+					/><span>{optionTwo.text}</span>
+				</label>
+				
+				<div className={this.state.answer !== '' ? 'button-visible': 'button-invisible'}>
+					<button type="submit" disabled={this.state.answer === '' ? true : false }>Submit answer</button>
+				</div>
+			</form>
 		)
 	}
 }

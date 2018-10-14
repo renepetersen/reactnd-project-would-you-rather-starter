@@ -2,12 +2,12 @@
   flex: 1 100%;
   display: flex;
   flex-flow: row wrap;
-  padding: 50px 20px; }
+  padding: 50px 20px 0; }
   .question-answers .answer {
     padding: 20px;
     flex: 1;
     position: relative;
-    border: 1px solid orange;
+    border: 1px solid #cfcfcf;
     min-height: 60px;
     align-items: center;
     display: flex;
@@ -16,19 +16,15 @@
     .question-answers .answer:first-child {
       margin: 0 20px 0 0; }
     .question-answers .answer.is-winner {
-      border: 1px solid #00b935;
-      background: #00b935;
+      border: 1px solid #008d84;
+      background-color: rgba(0, 170, 158, 0.160784);
       font-weight: 700; }
     .question-answers .answer.is-userchoice:before {
       content: 'Your choice';
       position: absolute;
-      top: -28px;
-      right: -20px;
-      transform: rotate(20deg);
-      width: 50px;
-      border: 1px solid;
-      border-radius: 25px;
+      top: -35px;
+      right: 0px;
       padding: 10px;
-      text-align: center;
-      font-size: 12px;
-      background: #fff; }
+      font-size: 16px;
+      color: #008d84;
+      font-weight: 700; }

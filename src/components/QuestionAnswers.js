@@ -22,6 +22,7 @@ class QuestionAnswers extends Component {
 
 		return (
 			<div className="question-answers">
+			
 				<div className={"answer " + userchoiceOptOne}>
 					<QuestionAnwser 
 						option={optionOne} 

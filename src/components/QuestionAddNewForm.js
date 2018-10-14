@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { handleSaveQuestion } from '../actions/questions'
+import { withRouter } from 'react-router-dom'
 
 class QuestionAddNewForm extends Component {
 	constructor(props) {
@@ -29,33 +30,41 @@ class QuestionAddNewForm extends Component {
 			this.state.text2,
 			authedUser
 		))
+
+		this.props.history.push(`/`)
 	}
 
 	render () {
 		return (
 			<div className='question-add-form'>
+				<h2 className="heading">Create new question</h2>
 			   
+			    <p>Would You Rather...</p>
+
 				<form onSubmit={this.handleSubmit} >
 					<label>
-						Text 1:
 						<textarea 
 							type="radio" 
 							name="text1"
 							value={this.state.text1}
 							onChange={this.handleChange}
+							placeholder='Enter option one text here'
 						/>
 					</label>
-<br />
+
 					<label>
-						Text 2:
 						<textarea 
 							type="radio" 
 							name="text2"
 							value={this.state.text2}
 							onChange={this.handleChange}
+							placeholder='Enter option two text here'
 						/>
 					</label>
-					<button type="submit">Submit</button>
+
+					<div>
+						<button type="submit" disabled={(this.state.text1 && this.state.text2) === '' ? true : false }>Submit question</button>
+					</div>
 				</form>
 
 			</div>
@@ -69,4 +78,4 @@ function mapStateToProps ({authedUser}) {
 	}
 }
 
-export default connect(mapStateToProps)(QuestionAddNewForm)
+export default withRouter(connect(mapStateToProps)(QuestionAddNewForm))

@@ -9,6 +9,8 @@
   justify-content: center;
   text-align: center;
   background-color: #cccccc1c;
-  border: 1px solid #ccc;
+  border: 1px solid orange;
   border-radius: 3px;
   padding: 25px; }
+  .login select {
+    border: 1px solid orange; }

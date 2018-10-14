@@ -20,21 +20,16 @@ class QuestionTeaser extends Component {
 					{name} asks:
 				</div>
 				<div className='col-1'>
-					<div className='author'>
-						<Avatar user={questionAuthor} />
-					</div>
+					<Avatar user={questionAuthor} />
 				</div>
 				<div className='col-2'>
 					<h2>Would you rather</h2>
 					
 					<div className='question-title'>{optionOne.text}...</div>
-					
-					<Link to={`/question/${id}`} className='question-link'>View question</Link>
-
 				</div>
-
-				
-				
+				<div className='col-3'>
+					<Link to={`/question/${id}`} className='question-link'></Link>
+				</div>
 			</div>
 		)
 	}

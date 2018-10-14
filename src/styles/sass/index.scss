@@ -5,35 +5,35 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 16px;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	font-family: "Arial, Verdana",
+	sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
 
 ol,
 ul {
-  list-style: none;
+	st-style: none;
 }
 
 a {
-  color: #DE7008;
-  text-decoration: none;
+	color: #DE7008;
+	text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #DE7008;
-  text-decoration: none;
+	color: #DE7008;
+	text-decoration: none;
 }
 a:focus {
-  outline: thin dotted;
-  outline: 0px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+	outline: thin dotted;
+	outline: 0px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 
@@ -43,9 +43,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  color: #3E4B53;
+	font-weight: 700;
+	line-height: 1.2;
 }
 
 h1 { font-size: 42px; }
@@ -60,8 +59,17 @@ h2,
 h3,
 h4,
 h5 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 p {
-  margin: 0 0 13px;
+	margin: 0 0 13px;
+}
+
+input, textarea, select, button {
+	font-size: 14px;
+}
+button {
+	padding: 7px 10px;
+	border: 1px solid #ccc;
+	background-color: #ececec;
 }

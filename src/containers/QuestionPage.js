@@ -7,6 +7,11 @@ import { formatQuestion } from '../utils/helpers'
 class QuestionPage extends Component {
 	render() {
 		const { id, question } = this.props 
+		
+		if (question === null) {
+			return <p>This Question doesn't exists</p>
+		}
+
 		const { hasVoted } = question
 
 		return (

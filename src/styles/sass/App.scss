@@ -1,5 +1,13 @@
 @charset 'UTF-8';
 
+button {
+	padding: 5px;
+}
+
+select {
+	padding: 5px;
+}
+
 // @import 'base/variables';
 @import 'components/common';
 @import 'components/login';
@@ -13,3 +21,6 @@
 @import 'components/question';
 @import 'components/question-author';
 @import 'components/question-answers';
+@import 'components/question-vote';
+@import 'components/question-add-form';
+@import 'components/leaderboard-card';

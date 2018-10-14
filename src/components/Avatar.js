@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 
 class Avatar extends Component {
-	// static propTypes = {
-
-	// }
-
 	render() {
-		const { avatarURL, name} = this.props.user
+		const { avatarURL, name } = this.props.user
 
 		return (
 			<div className='avatar'>

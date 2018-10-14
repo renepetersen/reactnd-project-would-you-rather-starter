@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import QuestionAddNewForm from '../components/QuestionAddNewForm'
 
 class QuestionAddNewPage extends Component {
@@ -6,6 +7,8 @@ class QuestionAddNewPage extends Component {
         return (
             <div>
                 <QuestionAddNewForm />
+
+				<Link to={`/`} className='go-back'>Go back</Link>
             </div>
         )
     }

@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import LeaderBoardCard from '../components/LeaderBoardCard'
 
 class Leaderboard extends Component {
@@ -7,12 +8,10 @@ class Leaderboard extends Component {
 		const { usersSorted } = this.props
 	
 		return (
-			<div>
+			<Fragment>
 				<h3 className='center'>Leaderboard</h3>
-
 				<ul className='dashboard-list'>
 
-					{/* {usersSortedKeys.map((useritem) => */}
 					{Object.keys(usersSorted).map((useritem) =>
 						<li key={useritem}>
 							<LeaderBoardCard 
@@ -26,7 +25,10 @@ class Leaderboard extends Component {
 					)}
 
 				</ul>
-			</div>
+
+				<Link to={`/`} className='go-back'>Go back</Link>
+
+			</Fragment>
 		)
 	}
 }
@@ -34,7 +36,7 @@ class Leaderboard extends Component {
 function mapStateToProps ({users}) {
 
 	//Add new object properties 'totalAnswers and totalQuestions' to userObject.
-	Object.keys(users).map((item) => {
+	Object.keys(users).forEach((item) => {
 		users[item].totalAnswers = Object.keys(users[item].answers).length
 		users[item].totalQuestions = users[item].questions.length
 	})
@@ -44,9 +46,6 @@ function mapStateToProps ({users}) {
 		.map(item => users[item])
 		.sort((a, b) => (a.totalAnswers + a.totalQuestions) - (b.totalAnswers + b.totalQuestions))
 		.reverse()
-
-
-// .filter( person => person.age >= 21 )
 
 	return {
 		usersSorted: usersArray,

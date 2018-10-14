@@ -6,7 +6,16 @@ class Dashboard extends Component {
 	render() {
 		return (
 			<div>
-				<h3 className='center'>answerdQuestionsIds Questions</h3>
+				<h3 className='center'>Unanswerd Questions</h3>
+				<ul className='dashboard-list'>
+					{this.props.unanswerdQuestionsIds.map((id) => (
+						<li key={id}>
+							<QuestionTeaser id={id} />
+						</li>
+					))}
+				</ul>
+
+				<h3 className='center'>Answerd Questions</h3>
 				<ul className='dashboard-list'>
 					{this.props.answerdQuestionsIds.map((id) => (
 						<li key={id}>
@@ -15,23 +24,13 @@ class Dashboard extends Component {
 					))}
 				</ul>
 
-				<h3 className='center'>unanswerdQuestionsIds Questions</h3>
-				<ul className='dashboard-list'>
-					{this.props.unanswerdQuestionsIds.map((id) => (
-						<li key={id}>
-							<QuestionTeaser id={id} />
-						</li>
-					))}
-				</ul>
 			</div>
 		)
 	}
 }
 
 function mapStateToProps ({authedUser, users, questions}) {
-	const answerdQids = users[authedUser].answers
-	const answerdQidsArr = Object.keys(answerdQids)
-	console.log(answerdQidsArr);
+	const answerdQidsArr = Object.keys(users[authedUser].answers)
 
 	const answerdQuestions = Object.keys(questions)
 		.filter(key => answerdQidsArr.includes(key))

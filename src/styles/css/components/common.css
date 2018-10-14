@@ -1,7 +1,28 @@
 .container {
-  max-width: 60%;
   margin: 0 auto;
   height: 100vh; }
+  @media (min-width: 541px) {
+    .container {
+      max-width: 500px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 600px; } }
 
 header + .container {
   height: calc(100vh - 142px); }
+
+.go-back {
+  font-size: 14px;
+  padding: 7px 10px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: #000;
+  background-color: #ececec;
+  transition: all 0.3s ease; }
+  .go-back:hover {
+    color: #000;
+    background-color: white; }
+
+.loading-bar div {
+  background-color: orange !important; }

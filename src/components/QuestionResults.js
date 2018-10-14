@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { formatQuestion } from '../utils/helpers'
 import QuestionAnswers from './QuestionAnswers'
 import QuestionAuthor from './QuestionAuthor'
@@ -16,7 +17,7 @@ class QuestionResults extends Component {
 
 		return (
 			<div className='question'>
-				<h2 className="heading">Would You Rather...</h2>
+				<h2 className="heading">Results: Would You Rather...</h2>
 
 				<QuestionAnswers 
 					optionOne={optionOne}
@@ -24,6 +25,8 @@ class QuestionResults extends Component {
 					totalVotes={totalVotes} 
 					authedUserQuestionAnswer={authedUserQuestionAnswer} 
 				/>
+
+				<Link to={`/`} className='go-back'>Go back</Link>
 
 				<h3 className="heading-sub">Question asked by:</h3>
 				
