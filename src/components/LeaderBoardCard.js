@@ -4,12 +4,12 @@ import { formatLeaderboardUser } from '../utils/helpers'
 
 class LeaderBoardCard extends Component {
 	render() {
-		const { id, name, avatarURL, totalanswers, totalquestions} = this.props
+		const { id, name, avatarURL, totalanswers, totalquestions, authedUser} = this.props
 
 		const fuser = formatLeaderboardUser(id, name, avatarURL, totalanswers, totalquestions)
 
 		return (
-			<div className='leaderboard-card'>
+			<div className={`leaderboard-card ${authedUser === fuser.id ? 'own' : ''}`}>
 				<div className='heading'>
 					{fuser.name}
 				</div>
