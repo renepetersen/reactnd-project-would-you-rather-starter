@@ -1,0 +1,10 @@
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  border: 1px solid #ccc; }
+  .avatar img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom; }
