@@ -404,14 +404,14 @@ header {
       font-weight: 700; }
 
 .user-changer {
-  background-color: #ffba39; }
+  background-color: #ffa5001a; }
   .user-changer select {
     background-color: transparent;
     font-size: 18px;
     font-weight: 700;
     color: #000000; }
     .user-changer select option {
-      background: #ffba39; }
+      background: #ffa5001a; }
 
 .go-back {
   font-size: 14px;

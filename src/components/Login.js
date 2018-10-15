@@ -16,7 +16,7 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<h1>Would You Rather...</h1>
-				<h2>Login</h2>
+				<h2>Please login:</h2>
 
 				{Object.keys(users).length > 0 && (
 					<div className="user-changer">
